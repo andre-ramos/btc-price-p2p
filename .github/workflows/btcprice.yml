@@ -1,0 +1,20 @@
+name: btc-fetch-price
+
+on:
+   schedule:
+     - cron: '*/2 * * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - name: Run BTC Fetch Price
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+        run: python fetch_p2p_price.py
+		
