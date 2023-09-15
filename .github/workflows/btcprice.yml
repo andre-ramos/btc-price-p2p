@@ -1,6 +1,8 @@
-name: btcprice1
+name: btc-price-fetch
 
-on:
+on:  
+  push:
+  pull_request:
   schedule:
     - cron: '*/2 * * * *'
 jobs:
