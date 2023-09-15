@@ -1,4 +1,4 @@
-name: btcprice
+name: btcprice1
 
 on:
   schedule:
