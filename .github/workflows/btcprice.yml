@@ -1,4 +1,4 @@
-name: btc-fetch-price
+name: btcprice
 
 on:
   schedule:
