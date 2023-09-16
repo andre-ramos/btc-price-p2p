@@ -32,7 +32,7 @@ sum_prices = 0
 for item in prices:
     sum_prices+=item['price']
     
-avg = sum(sum_prices)/len(prices)
+avg = sum_prices/len(prices)
 print(f"PREÇO BTC: {cotacao_bitcoin}")
 print(prices)
 
