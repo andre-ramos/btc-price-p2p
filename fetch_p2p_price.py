@@ -19,6 +19,7 @@ def send_to_telegram(message):
 cotacoes = requests.get("https://economia.awesomeapi.com.br/last/BTC-BRL")
 cotacoes = cotacoes.json()
 cotacao_bitcoin = cotacoes['BTCBRL']["bid"]
+print(os.getenv('API_KEY')
 headers = {'Authorization': 'Bearer ' +  os.getenv('API_KEY')}
 r = requests.get("https://hodlhodl.com/api/v1/offers?[side]=buy&filters[currency_code]=BRL", headers = headers)
 prices = []
