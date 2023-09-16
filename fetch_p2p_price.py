@@ -21,12 +21,11 @@ headers = {'Authorization': 'Bearer ' +  os.getenv('API_KEY')}
 r = requests.get("https://hodlhodl.com/api/v1/offers?[side]=buy&filters[currency_code]=BRL", headers = headers)
 prices = []
 data = json.loads(r.content)
-print(data)
 for offer in data['offers']:
     if offer['trader']['trades_count'] > 0 and float(cotacao_bitcoin) <= float(offer['price']) :
         prices.append(float(offer['price']))
 avg = sum(prices)/len(prices)
-
+print(prices)
 
 for price in prices:
     res = int(cotacao_bitcoin) + 5000
