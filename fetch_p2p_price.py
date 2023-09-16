@@ -26,8 +26,8 @@ for offer in data['offers']:
     if offer['trader']['trades_count'] > 0 and float(cotacao_bitcoin) <= float(offer['price']) :
         prices.append({"id" :offer['id'],
                       "price" :float(offer['price'],
-                      "login" :offer['trader']['login']
-                      "rating":offer['trader']['rating']))
+                      "login" :offer['trader']['login'],
+                      "rating":offer['trader']['rating']})
 avg = sum(prices)/len(prices)
 print(f"PREÇO BTC: {cotacao_bitcoin}")
 print(prices)
@@ -39,7 +39,7 @@ for item in prices:
         msg = f""" 📣 NOVA OFERTA BARATA NA HODLHODL 📣  
             👤 USUÁRIO: {item['login']}
             ⭐️ RATING: {str(rating)}
-            🔍PREÇO BTC: R$ {cotacao_bitcoin},
+            🔍PREÇO BTC: R$ {cotacao_bitcoin}
             🔍PREÇO DO VENDEDOR: {item['price']}
             🔗 https://hodlhodl.com/offers/{item['id']}"""
         send_to_telegram(msg)
