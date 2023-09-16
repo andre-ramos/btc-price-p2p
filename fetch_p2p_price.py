@@ -43,9 +43,9 @@ for item in prices:
         msg = f""" 📣 NOVA OFERTA BARATA NA HODLHODL 📣  
             👤 USUÁRIO: {item['login']}
             ⭐️ RATING: {str(rating)}
-            🔍PREÇO BTC: R$ {cotacao_bitcoin}
-            🛎 PREÇO DO VENDEDOR: R$ {item['price']:,}
-            🔗 https://hodlhodl.com/offers/{item['id']:,}"""
+            🔍PREÇO BTC: R$ {float(cotacao_bitcoin):,}
+            🛎 PREÇO DO VENDEDOR: R$ {float(item['price']):,}
+            🔗 https://hodlhodl.com/offers/{item['id']}"""
         send_to_telegram(msg)
     #else:
     #    send_to_telegram(f"PREÇO BITCOIN AGORA: R$ {cotacao_bitcoin}")
