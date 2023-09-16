@@ -28,7 +28,11 @@ for offer in data['offers']:
                       "price" :float(offer['price']),
                       "login" :offer['trader']['login'],
                       "rating":offer['trader']['rating']})
-avg = sum(prices)/len(prices)
+sum_prices = 0
+for item in prices:
+    sum_prices+=item['price']
+    
+avg = sum(sum_prices)/len(prices)
 print(f"PREÇO BTC: {cotacao_bitcoin}")
 print(prices)
 
