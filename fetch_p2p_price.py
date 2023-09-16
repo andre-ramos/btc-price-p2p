@@ -26,7 +26,7 @@ for offer in data['offers']:
     if offer['trader']['trades_count'] > 0 and float(cotacao_bitcoin) <= float(offer['price']) :
         prices.append(float(offer['price']))
 avg = sum(prices)/len(prices)
-print(f"PREÇO BTC: {cotacao_bitcoin})
+print(f"PREÇO BTC: {cotacao_bitcoin}")
 print(prices)
 
 for price in prices:
