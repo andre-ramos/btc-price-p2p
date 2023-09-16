@@ -33,7 +33,7 @@ for item in prices:
     sum_prices+=item['price']
     
 avg = sum_prices/len(prices)
-print(f"PREÇO BTC: {cotacao_bitcoin:_}")
+print(f"PREÇO BTC: {cotacao_bitcoin:,}")
 print(prices)
 
 res = int(cotacao_bitcoin) + 5000    
@@ -44,8 +44,8 @@ for item in prices:
             👤 USUÁRIO: {item['login']}
             ⭐️ RATING: {str(rating)}
             🔍PREÇO BTC: R$ {cotacao_bitcoin}
-            🛎 PREÇO DO VENDEDOR: R$ {item['price']:_}
-            🔗 https://hodlhodl.com/offers/{item['id']:_}"""
+            🛎 PREÇO DO VENDEDOR: R$ {item['price']:,}
+            🔗 https://hodlhodl.com/offers/{item['id']:,}"""
         send_to_telegram(msg)
     #else:
     #    send_to_telegram(f"PREÇO BITCOIN AGORA: R$ {cotacao_bitcoin}")
