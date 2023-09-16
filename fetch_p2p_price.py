@@ -31,7 +31,7 @@ for price in prices:
     res = int(cotacao_bitcoin) + 5000
     if price <= res:
         send_to_telegram(f"PREÇO BITCOIN AGORA: R$ {cotacao_bitcoin}")
-        send_to_telegram(f"ATENÇÃO! NOVA OFERTA NO HODLHODL: {price}")
+        send_to_telegram(f"ATENÇÃO! NOVA OFERTA NO HODLHODL NO PREÇO: {price} . RATING DO VENDEDOR: {offer['trader']['rating']}")
     #else:
     #    send_to_telegram(f"PREÇO BITCOIN AGORA: R$ {cotacao_bitcoin}")
     #    send_to_telegram(f"Nenhuma promo boa por hora, só tem isso: {prices}")
