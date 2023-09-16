@@ -32,7 +32,7 @@ print(prices)
 for price in prices:
     res = int(cotacao_bitcoin) + 5000    
     if price >= res:
-        rating = double(offer['trader']['rating']) * 5
+        rating = float(offer['trader']['rating']) * 5
         msg = f""" 📣 NOVA OFERTA BARATA NA HODLHODL 📣  
             👤 USUÁRIO: {offer['trader']['login']}
             ⭐️ RATING: {str(rating)}
