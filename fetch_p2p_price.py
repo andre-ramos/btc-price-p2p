@@ -33,7 +33,7 @@ for item in prices:
     sum_prices+=item['price']
     
 avg = sum_prices/len(prices)
-print(f"PREÇO BTC: {cotacao_bitcoin:,}")
+print(f"PREÇO BTC: {float(cotacao_bitcoin):,}")
 print(prices)
 
 res = int(cotacao_bitcoin) + 5000    
