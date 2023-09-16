@@ -31,9 +31,10 @@ print(prices)
 for price in prices:
     res = int(cotacao_bitcoin) + 5000    
     if price >= res:
+        rating = int(offer['trader']['rating']) * 5
         msg = f""" 📣 NOVA OFERTA BARATA NA HODLHODL 📣  
-            USUÁRIO: {offer['trader']['login']}
-            RATING: {offer['trader']['rating']}
+            👤 USUÁRIO: {offer['trader']['login']}
+            ⭐️ RATING: {str(rating)}
             PREÇO BTC: R$ {cotacao_bitcoin},
             PREÇO DO VENDEDOR: {price}
             🔗 https://hodlhodl.com/offers/{offer['id']}"""
