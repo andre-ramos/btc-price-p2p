@@ -38,13 +38,13 @@ print(prices)
 
 res = int(cotacao_bitcoin) + 5000    
 for item in prices:
-    if item['price'] >= res:
+    if item['price'] <= res:
         rating = float(item['rating']) * 5
         msg = f""" 📣 NOVA OFERTA BARATA NA HODLHODL 📣  
             👤 USUÁRIO: {item['login']}
             ⭐️ RATING: {str(rating)}
             🔍PREÇO BTC: R$ {cotacao_bitcoin}
-            🔍PREÇO DO VENDEDOR: {item['price']}
+            🛎 PREÇO DO VENDEDOR: {item['price']}
             🔗 https://hodlhodl.com/offers/{item['id']}"""
         send_to_telegram(msg)
     #else:
