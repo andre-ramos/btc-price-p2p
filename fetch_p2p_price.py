@@ -2,6 +2,7 @@ import requests
 import os
 import json
 
+
 def send_to_telegram(message):
 
     apiToken = os.getenv('BOT_KEY')
@@ -28,10 +29,15 @@ avg = sum(prices)/len(prices)
 print(prices)
 
 for price in prices:
-    res = int(cotacao_bitcoin) + 5000
-    if price <= res:
-        send_to_telegram(f"PREÇO BITCOIN AGORA: R$ {cotacao_bitcoin}")
-        send_to_telegram(f"ATENÇÃO! NOVA OFERTA NO HODLHODL NO PREÇO: {price} . RATING DO VENDEDOR: {offer['trader']['rating']}")
+    res = int(cotacao_bitcoin) + 5000    
+    if price >= res:
+        msg = f""" 📣 NOVA OFERTA BARATA NA HODLHODL 📣  
+            USUÁRIO: {offer['trader']['login']}
+            RATING: {offer['trader']['rating']}
+            PREÇO BTC: R$ {cotacao_bitcoin},
+            PREÇO DO VENDEDOR: {price}
+            🔗 https://hodlhodl.com/offers/{offer['id']}"""
+        send_to_telegram(msg)
     #else:
     #    send_to_telegram(f"PREÇO BITCOIN AGORA: R$ {cotacao_bitcoin}")
     #    send_to_telegram(f"Nenhuma promo boa por hora, só tem isso: {prices}")
