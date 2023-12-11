@@ -28,7 +28,7 @@ for offer in data['offers']:
             rating = 0
             if not offer['trader']['rating']:           
                 rating = 0
-            else
+            else:
                 rating = offer['trader']['rating']
             prices.append({"id" :offer['id'], "price" :float(offer['price']), "login" :offer['trader']['login'], "rating": rating})
             
