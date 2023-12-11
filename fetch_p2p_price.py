@@ -25,7 +25,7 @@ data = json.loads(r.content)
 for offer in data['offers']:
     if offer['trader']['trades_count'] > 0 and float(cotacao_bitcoin) <= float(offer['price']) :
         if offer['price']:
-            if offer['trader']['rating']           
+            if offer['trader']['rating']:           
                 prices.append({"id" :offer['id'], "price" :float(offer['price']), "login" :offer['trader']['login'], "rating":offer['trader']['rating']})
             else:
                 prices.append({"id" :offer['id'], "price" :float(offer['price']), "login" :offer['trader']['login'], "rating":"None"})
