@@ -4,7 +4,6 @@ import json
 
 
 def send_to_telegram(message):
-
     apiToken = os.getenv('BOT_KEY')
     chatID = '47651571'
     apiURL = f'https://api.telegram.org/bot{apiToken}/sendMessage'
